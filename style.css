@@ -1,0 +1,68 @@
+body {
+  /* @media (min-width: 1280px) {
+    background-image: url('./assets/boat-beach.webp');
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  @media (max-width: 1280px) {
+    background-image: url('./assets/boat-beach-2.png');
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  @media (max-width: 1024px) {
+    background-image: url('./assets/boat-beach-3.png');
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+  } */
+}
+
+body main {
+  display: flex;
+  img {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+header h1 {
+  position: absolute;
+  top: 10%;
+  left: 68rem;
+}
+
+li {
+  p {
+    visibility: hidden;
+  }
+  &:hover p {
+    visibility: visible;
+  }
+}
+
+/* Whitehaven Beach, Australia */
+li:first-child {
+  position: absolute;
+  bottom: 12rem;
+  left: 15rem;
+  list-style: none;
+}
+
+/* Lanikai Beach, Hawaii */
+li:nth-last-child(2) {
+  position: absolute;
+  bottom: 23rem;
+  left: 40rem;
+  list-style: none;
+}
+
+/* Bora Bora, French Polynesia */
+li:nth-last-child(3) {
+  position: absolute;
+  bottom: 23rem;
+  left: 80rem;
+  list-style: none;
+}
