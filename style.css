@@ -1,10 +1,38 @@
 body {
-  background: linear-gradient(172deg, #0370ab, #ede5de 50%);
-  background-repeat: no-repeat;
-  height: 100vh;
+  margin: 0;
 }
 
-body main {
+/* parallax "viewport" */
+.parallax {
+  height: 2976px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  perspective: 1px;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.layer1 {
+  height: 5000px;
+  overflow-y: hidden;
+  transform: translateZ(0);
+  top: 32rem;
+}
+
+.layer2 {
+  background-image: url('./assets/iso-beach-orig.jpg');
+  transform: translateZ(-5px) scale(6);
+}
+
+/* body main {
   img {
     position: absolute;
     margin: 0.5rem auto 0;
@@ -22,13 +50,13 @@ body main {
       max-width: 1280px;
     }
   }
-}
+} */
 
-header h1 {
+/* header h1 {
   position: absolute;
   top: 10%;
   left: 68rem;
-}
+} */
 
 li {
   p {
@@ -37,26 +65,29 @@ li {
   &:hover p {
     visibility: visible;
   }
+
+  margin-top: 15rem;
+  margin-bottom: 15rem;
 }
 
 /* Whitehaven Beach, Australia */
-li:first-child {
+/* li:first-child {
   position: absolute;
   bottom: 12rem;
   left: 15rem;
   list-style: none;
-}
+} */
 
 /* Lanikai Beach, Hawaii */
-li:nth-last-child(2) {
+/* li:nth-last-child(2) {
   position: absolute;
   bottom: 23rem;
   left: 40rem;
   list-style: none;
-}
+} */
 
 /* Bora Bora, French Polynesia */
-li:nth-last-child(3) {
+/* li:nth-last-child(3) {
   position: absolute;
   bottom: 23rem;
   left: 80rem;
@@ -67,4 +98,4 @@ li:nth-child(5) {
   position: absolute;
   top: 10rem;
   list-style: none;
-}
+} */

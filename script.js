@@ -1,8 +1,10 @@
-const main = document.body.children[1]
+const main = document.querySelector('main')
+main.setAttribute('class', 'parallax')
 
-const heroImage = main.appendChild(document.createElement('img'))
-// heroImage.setAttribute('src', './assets/boat-beach-768.png')
-heroImage.setAttribute(
-  'srcset',
-  './assets/boat-beach-768.png 768w, ./assets/boat-beach-1025.png 1024w, ./assets/boat-beach-1280.png 1280w,'
-)
+const ulSection = main.children[1]
+console.log({ ulSection })
+ulSection.setAttribute('class', 'parallax-layer layer1')
+
+const bgSection = document.createElement('div')
+bgSection.setAttribute('class', 'parallax-layer layer2')
+ulSection.before(bgSection)
